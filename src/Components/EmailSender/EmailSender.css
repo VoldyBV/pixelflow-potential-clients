@@ -1,0 +1,195 @@
+.email-sender {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    position: relative;
+}
+.email-sender .header {
+    width: 100%;
+    margin: 0 auto;
+    height: 2rem;
+    background-image: linear-gradient(90deg, var(--pf-teal) 18.54%, rgba(99, 146, 158, .95) 27.58%, rgba(95, 60, 87, .75) 72.07%, var(--pf-purple) 93.56%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pf-white);
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.email-sender .header button {
+    appearance: none;
+    display: block;
+    font: inherit;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    color: var(--pf-white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-block: 0px;
+    padding-inline: 0px;
+    transition: all 0.3s;
+    line-height: 0px;
+}
+.email-sender .header button:hover {
+    transform: rotateZ(180deg);
+}
+.email-sender label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.email-sender label .field {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    outline: solid 1px var(--pf-black);
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+}
+#client-email-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+#client-email-container input {
+    height: 32px;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1.25rem;
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+}
+#client-email-container input:focus {
+    outline: none;
+}
+#client-email-container img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+}
+#text-editor-container {
+    flex: 1;
+    align-self: stretch;
+    max-height: 364px;
+}
+.email-sender .text-editor {
+    flex: 1;
+    align-self: stretch;
+    width: 100%;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+}
+.email-sender .text-editor .quill {
+    flex: 1;
+    align-self: stretch;
+}
+.email-sender .text-editor .ql-container.ql-snow {
+    border: solid 1px #131313;
+    border-bottom: none;
+    border-radius: 0.75rem 0.75rem 0 0;
+    height: 286px !important;
+    max-height: 286px;
+}
+.email-sender .text-editor .ql-editor {
+    padding: 10px;
+    overflow: auto;
+}
+.email-sender .text-editor .ql-toolbar.ql-snow {
+    border: solid 1px #131313;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+.ql-snow .ql-tooltip {
+    z-index: 100;
+}
+.email-sender .ql-snow.ql-toolbar:after, .ql-snow .ql-toolbar:after {
+    display: none;
+}
+#toolbar {
+    display: flex;
+}
+/* Styling search modal */
+
+.email-sender .search-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #13131380;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+.email-sender .search-modal-overlay .search-body {
+    max-height: 80%;
+    width: 60%;
+    background-color: var(--pf-white);
+    border: #131313 solid 2px;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    overflow: auto;
+}
+.email-sender .search-modal-overlay .search-body input {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    outline: solid 1px var(--pf-black);
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+}
+.email-sender .search-modal-overlay .search-body a {
+    font-size: 1.25rem;
+    color: var(--pf-teal);
+    width: fit-content;
+}
+.email-sender .search-modal-overlay .search-body button {
+    padding: 0.25rem 0.5rem;
+    border: solid 1px var(--pf-black);
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: #131313;
+    color: white;
+    cursor: pointer;
+}
+.email-sender .search-modal-overlay .search-body table {
+    border-spacing: 0.75rem;
+}
+.email-sender .search-modal-overlay .search-body th {
+    font: inherit;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: left;
+}
+.email-sender .search-modal-overlay .search-body td {
+    font: inherit;
+    font-size: 1.25rem;
+    text-align: right;
+}
+.email-sender .search-modal-overlay .search-body tr:last-child td {
+    text-align: left;
+}

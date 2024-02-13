@@ -1,0 +1,230 @@
+.data-viewer {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+    position: relative;
+}
+.data-viewer .data-manipulator {
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    background-color: var(--pf-white);
+    box-shadow: 0px -1rem 0px 0px var(--pf-white), 0px 1rem 0px 0px var(--pf-white);
+}
+.data-viewer .header {
+    width: 100%;
+    margin: 0 auto;
+    height: 2rem;
+    background-image: linear-gradient(90deg, var(--pf-teal) 18.54%, rgba(99, 146, 158, .95) 27.58%, rgba(95, 60, 87, .75) 72.07%, var(--pf-purple) 93.56%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pf-white);
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.data-viewer .header button {
+    appearance: none;
+    display: block;
+    font: inherit;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    color: var(--pf-white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-block: 0px;
+    padding-inline: 0px;
+    transition: all 0.3s;
+    line-height: 0px;
+}
+.data-viewer .header button:hover {
+    transform: rotateZ(180deg);
+}
+.data-viewer .data-manipulator .data-fields {
+    width: 100%;
+    
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    font: inherit;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    color: var(--pf-black);
+}
+.data-viewer .data-manipulator .data-fields label {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: inherit;
+    height: min-content;
+    margin: auto 0;
+}
+.data-viewer .data-manipulator .data-fields .form-field {
+    font: inherit;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    outline: solid 1px var(--pf-black);
+    border-radius: 0.75rem;
+}
+.data-viewer .data-manipulator .data-fields input.form-field:read-only {
+    cursor: not-allowed;
+}
+.data-viewer .data-manipulator .data-fields input.form-field::placeholder {
+    color: red;
+}
+.data-viewer .data-manipulator .data-fields select.form-field:disabled {
+    color: black;
+    opacity: 1;
+    cursor: not-allowed;
+}
+.data-viewer .data-manipulator .buttons {
+    width: 100%;
+    
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    justify-content: stretch;
+}
+.data-viewer .data-manipulator .controls {
+    width: 100%;
+    
+    margin: 0 auto;
+    display: flex;
+    column-gap: 1.25rem;
+    justify-content: stretch;
+}
+.data-viewer .data-manipulator .buttons button,
+.data-viewer .data-manipulator .controls button {
+    height: 3rem;
+    flex: 1;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: solid 2px black;
+    color: var(--pf-white);
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .new{
+    background-color: hsl(134, 34%, 39%);
+    border-color: hsl(134, 34%, 39%);
+    color: white;
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .new:hover {
+    background-color: #52A666;
+}
+.data-viewer .data-manipulator .buttons .update {
+    background-color: hsl(314, 23%, 30%);
+    border-color: hsl(314, 23%, 30%);
+    color: white;
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .update:hover {
+    background-color: hsl(314, 23%, 40%);
+}
+.data-viewer .data-manipulator .buttons .delete {
+    background-color: hsl(356, 80%, 55%);
+    border-color: hsl(356, 80%, 55%);
+    color: white;
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .delete:hover {
+    background-color: hsl(356, 80%, 60%);
+}
+.data-viewer .data-manipulator .buttons .previous-next {
+    background-color: hsl(217, 67%, 54%);
+    border-color: hsl(217, 67%, 54%);
+    color: white;
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .previous-next:hover {
+    background-color: hsl(217, 67%, 65%);
+}
+.data-viewer .data-manipulator .buttons .view-documents {
+    background-color: #63929e;
+    border-color: #63929e;
+    color: white;
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .buttons .view-documents:hover {
+    background-color: hsl(192, 23%, 65%);
+}
+.data-viewer .data-manipulator .controls .cancel {
+    background-color: #131313;
+    border-color: #131313;
+    color: var(--pf-white);
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .controls .cancel:hover {
+    background-color: hsl(0, 0%, 17%);
+}
+.data-viewer .data-manipulator .controls .submit {
+    background-color: hsl(217, 67%, 54%);
+    border-color: hsl(217, 67%, 54%);
+    color: var(--pf-white);
+    transition: all 0.3s;
+}
+.data-viewer .data-manipulator .controls .submit:hover {
+    background-color: hsl(217, 67%, 65%);
+}
+.docs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+    background-color: white;
+}
+.docs .header {
+    max-width: unset;
+    margin-bottom: 1.5rem;
+}
+.docs .data {
+    width: 100%;
+    border-spacing: 0;
+    border: solid var(--pf-teal) 0.5px;
+}
+.docs .data th {
+    background-color: var(--pf-teal);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 1.25rem;
+    border: solid var(--pf-teal) 0.5px;
+}
+.docs .data td {
+    text-align: center;
+    font-size: 1rem;
+    border: solid var(--pf-teal) 0.5px;
+}
+.docs .data td a{
+    font: inherit;
+    color: inherit;
+}
+.docs .data .selected-record td {
+    background-color: var(--pf-teal) !important;
+    color: white;
+}
+.docs .data tr:nth-child(2n-1) td {
+    background-color: var(--ultra-light-blue);
+}

@@ -1,0 +1,14 @@
+.button-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+.button-component img {
+    height: 2rem;
+    width: 2rem;
+}
+.button-component span {
+    height: fit-content;
+    line-height: 0;
+}

@@ -1,0 +1,32 @@
+:root {
+  --pf-white: white;
+  --pf-light-blue: #aacbea;
+  --pf-beige: #dbb68f;
+  --pf-black: #151515;
+  --pf-teal: #63929e;
+  --pf-purple: #5f3c57;
+  --blue: #5b95f9;
+  --ultra-light-blue: #e8f0fe;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.waiting-screen-transparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  background-color: rgba(0, 0, 0, 0);
+}
