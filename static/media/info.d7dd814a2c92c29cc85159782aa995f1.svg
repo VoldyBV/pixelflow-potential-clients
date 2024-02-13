@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 32 32" xml:space="preserve" class="">
+  <g>
+    <g fill="none" fill-rule="evenodd" stroke="#444" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.5 11.5h1v5m-1 0h2M12 9a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" fill="" opacity="1"/>
+      <path d="M4.5 2.5h10l4 4v14h-14zm14 4h-4v-4" fill="" opacity="1"/>
+    </g>
+  </g>
+</svg>

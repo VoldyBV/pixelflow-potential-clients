@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/pixelflow-potential-clients/static/css/main.56cf0ac0.css",
+    "main.js": "/pixelflow-potential-clients/static/js/main.76bd906b.js",
+    "static/js/787.8d330c23.chunk.js": "/pixelflow-potential-clients/static/js/787.8d330c23.chunk.js",
+    "static/media/cancel.svg": "/pixelflow-potential-clients/static/media/cancel.9e7587a097c2cfcdfab6e7b4dc92a515.svg",
+    "static/media/loading-animation.svg": "/pixelflow-potential-clients/static/media/loading-animation.ecdb1129a25c9be966b54fba5db5d3af.svg",
+    "index.html": "/pixelflow-potential-clients/index.html",
+    "static/media/send-white.svg": "/pixelflow-potential-clients/static/media/send-white.4620333f6164270fb013fb9eff50ea3a.svg",
+    "static/media/search.svg": "/pixelflow-potential-clients/static/media/search.0b474842a2214a1b3e76b9b737a495eb.svg",
+    "static/media/confirm.svg": "/pixelflow-potential-clients/static/media/confirm.52a60d737cee39761810c56a26349586.svg",
+    "static/media/view-document.svg": "/pixelflow-potential-clients/static/media/view-document.a2523472f00e447da0621e33a74c8c3b.svg",
+    "static/media/info.svg": "/pixelflow-potential-clients/static/media/info.d7dd814a2c92c29cc85159782aa995f1.svg",
+    "static/media/delete-document.svg": "/pixelflow-potential-clients/static/media/delete-document.1aba5c44b84fba06a4a06865ebcc5b73.svg",
+    "static/media/edit-document.svg": "/pixelflow-potential-clients/static/media/edit-document.ce967637c5557b52ae2e401ae491927f.svg",
+    "static/media/next-document.svg": "/pixelflow-potential-clients/static/media/next-document.606a1c6f55ce39ab09e57ca9e8fcf2b2.svg",
+    "static/media/previous-document.svg": "/pixelflow-potential-clients/static/media/previous-document.2b16fc4d3bcf1e3130f52e1f48cd242c.svg",
+    "static/media/create-new-document.svg": "/pixelflow-potential-clients/static/media/create-new-document.f8d7b3df9f2c466d499b93fbe48fe1b1.svg",
+    "main.56cf0ac0.css.map": "/pixelflow-potential-clients/static/css/main.56cf0ac0.css.map",
+    "main.76bd906b.js.map": "/pixelflow-potential-clients/static/js/main.76bd906b.js.map",
+    "787.8d330c23.chunk.js.map": "/pixelflow-potential-clients/static/js/787.8d330c23.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56cf0ac0.css",
+    "static/js/main.76bd906b.js"
+  ]
+}
