@@ -8,6 +8,7 @@ import ControlPanel from './Components/ControlPanel/ControlPanel'
 import DataViewer from './Components/DataViewer/DataViewer'
 import TemplateBuilder from './Components/TemplateBuilder/TemplateBuilder'
 import EmailSender from './Components/EmailSender/EmailSender'
+import Preloader from './PluggedComponents/Preloader/Preloader'
 
 interface AppState {
   isLoadingScreenOn: boolean
@@ -98,6 +99,7 @@ export default class App extends Component<AppProps, AppState> {
     return (
       <div>
         {this.state.isLoadingScreenOn ? <Loading_Screen></Loading_Screen> : this.state.currentComponent}
+        <Preloader></Preloader>
       </div>
     )
   }

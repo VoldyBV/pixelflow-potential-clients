@@ -10,6 +10,7 @@ import IClientDocument from '../../models/clientDocument.interface';
 import ITEmplateDocument from '../../models/templateDocument.interface';
 //mongo services
 import clientApi from '../../mongodb-service/client-api';
+import IGoogleScriptResponse from '../../models/googleScriptResponse.interface';
 
 interface EmailSenderProps {
     goToControlPanel: (a: string) =>  void,
@@ -150,11 +151,11 @@ export default class EmailSender extends Component<EmailSenderProps, EmailSender
   }
   async sendEmail(): Promise<void> {
     try {
-        const webhook = `https://hook.eu2.make.com/eixhenwq6wh8p4euew61x4ms3c2sxj8s`;
+        const google_script_url = `https://script.google.com/macros/s/AKfycbwXqnbSo5TdzNt2lph0PkkaZUq_WpeO61_uD0VgakzbDo6706NJTMKywyeWrGpXqSelmA/exec`
         var to = this.state.to;
         var subject = this.state.subject;
         var message = this.state.message;
-
+        var preloader = document.querySelector(".preloader")! as HTMLDivElement;
         if(to === '') {
             alert("Please choose an email!");
             throw "Please choose an email!";
@@ -167,17 +168,31 @@ export default class EmailSender extends Component<EmailSenderProps, EmailSender
             alert("Please write a message!");
             throw "Please write a subject!"
         }
-        var data = new FormData();
-        data.append("to", to);
-        data.append("subject", subject);
-        data.append("message", message)
-        var response = await fetch(webhook, {
-            method: "POST",
-            body: data
-        })
-        if(!response.ok) {
-          alert("Some unexpected error has occured!\nOpen dev tools and contact developer!");
-          console.error(response);
+        preloader.style.display = 'flex';
+        var request = encodeURI(`${google_script_url}?email=${to}&subject=${subject}&body=${message}`);
+        var response = await fetch(request, {method: 'get'});
+        var result:IGoogleScriptResponse = await response.json()
+        preloader.style.display = 'none';
+        if(!result.status) {
+          if(result.emailsLeft === 0) alert(result.message)
+          else alert("Unexpected error has occured\nTake a screen shot oc console in dev tools and contact developer!")
+          throw result.message;
+        }
+
+        switch(result.emailsLeft) {
+          case 90:
+          case 75:
+          case 50:
+          case 25:
+          case 10:
+          case 5:
+            alert(`You have ${result.emailsLeft} emails more until you reach your daily limit`);
+            break;
+          case 1:
+            alert(`You have 1 email more until you reach your daily limit`);
+            break;
+          default: console.log(result.emailsLeft);
+          ;break;
         }
         var currentChosenClient = this.state.currentChosenClient;
         var currentChosenClientID = this.state.currentChosenClientID
@@ -200,9 +215,8 @@ export default class EmailSender extends Component<EmailSenderProps, EmailSender
           to: '',
           subject: '',
           message: ''
-        }, () => console.log(this.state.clients))
+        })
     } catch (error) {
-      alert("Some unexpected error has occured!\nOpen dev tools and contact developer!");
       console.error(error);
     }
   }
